@@ -1,13 +1,180 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #e8e8e8;
+    font-weight: 400;
+    font-size: calc(100vw - 94vw);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes barFightAnimation {
+    0% {
+        text-shadow: none;
+        color: #531335;
+    }
+    50% {
+        text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px, #FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px, 0 0 100px #FF2D95;
+        color: #FFFFFF;
+    }
+    70% {
+        text-shadow: none;
+        color: #531335;
+    }
+    75% {
+        text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px, #FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px, 0 0 100px #FF2D95;
+        color: #FFFFFF;
+    }
+    100% {
+        text-shadow: none;
+        color: #531335;
+    }
 }
+
+body {
+    background-color: #101011;
+}
+
+.neon {
+    position: relative;
+}
+
+.neon .padding {
+    height: calc(100vw - 85vw);
+    min-height: 40px;
+}
+
+.neon .lines {
+    border-bottom: 1px solid #4b4d4c;
+    border-top: 1px solid #4b4d4c;
+    height: calc(100vw - 90vw);
+    min-height: 40px;
+}
+
+.neon .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.neon .text h1 {
+    animation-name: barFightAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 4.5s;
+    font-weight: 200;
+    font-style: italic;s
+    font-size: calc(100vw - 82vw);
+    padding-bottom: 15px;
+    color: #531335;
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.neon {*/
+/*    padding-left: 125px;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: 10;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    justify-content: flex-start;*/
+/*    flex-direction: column;*/
+/*    padding-top: 85px;*/
+
+
+/*}*/
+/*.neon p {*/
+/*    white-space: nowrap;*/
+/*    user-select: none;*/
+/*    font-family: "HelveticaNeueCyr";*/
+/*    font-style: italic;*/
+/*    font-weight: 200;*/
+/*    font-size: 230px;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+
+
+/*}*/
+/*.latteart {*/
+/*    color: #FFFFFF;*/
+/*    text-shadow:  #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #2dff30 0px 0px 20px, #2dff30 0px 0px 30px, #2dff30 0px 0px 40px, #2dff30 0px 0px 50px, #2dff30 0px 0px 75px, #2dff30 0px 0px 100px;*/
+/*}*/
+/*.barfight {*/
+/*    color: #4c2f3f;*/
+/*    animation-name: blick;*/
+/*    animation-duration: 3s;*/
+/*    animation-iteration-count: infinite;*/
+/*}*/
+/*.mainline {*/
+/*    position: relative;*/
+/*    padding-top: 175px;*/
+/*    padding-bottom: 175px;*/
+/*}*/
+/*.line1 {*/
+/*    height: 105px;*/
+/*    border-top: 1px solid #545455;*/
+/*}*/
+/*.line2 {*/
+/*    height: 210px;*/
+/*    border-top: 1px solid #545455;*/
+/*    border-bottom: 1px solid #545455;*/
+/*}*/
+/*.line3 {*/
+/*    height: 105px;*/
+/*    border-bottom: 1px solid #545455;*/
+/*}*/
+
+/*.text p {*/
+/*    height: 610px;*/
+/*    left: 41px;*/
+/*    top: 897px;*/
+/*    font-family: HelveticaNeueCyr;*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-size: 70px;*/
+
+/*    color: #E8E8E8;*/
+
+/*}*/
+/*.text h1 {*/
+/*    height: 63px;*/
+/*    left: 376px;*/
+/*    top: 834px;*/
+/*    text-align: center;*/
+/*    font-family: HelveticaNeueCyr;*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    font-size: 70px;*/
+
+/*    color: #E8E8E8;*/
+/*}*/
