@@ -8,6 +8,7 @@
     color: #e8e8e8;
     font-weight: 400;
     font-size: calc(100vw - 94vw);
+    max-font-size: 20px;
 }
 
 @keyframes barFightAnimation {
@@ -16,7 +17,7 @@
         color: #531335;
     }
     50% {
-        text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px, #FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px, 0 0 100px #FF2D95;
+        text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px, #ff2d95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px, 0 0 100px #FF2D95;
         color: #FFFFFF;
     }
     70% {
@@ -33,6 +34,21 @@
     }
 }
 
+@keyframes logoAnimation {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 99, 176, 0.6)) drop-shadow(0 0 10px rgba(255, 45, 149, 0.6)) drop-shadow(0 0 20px rgba(255, 45, 149, 0.5));
+        stroke: #b35684;
+    }
+    50% {
+        filter: drop-shadow(0 0 2px #FFF) drop-shadow(0 0 7px #FFF) drop-shadow(0 0 10px rgba(255, 45, 149, 0.6)) drop-shadow(0 0 18px rgba(255, 45, 149, 0.5)) drop-shadow(0 0 25px rgba(255, 45, 149, 0.4));
+        stroke: #FFFFFF;
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(255, 99, 176, 0.6)) drop-shadow(0 0 10px rgba(255, 45, 149, 0.6)) drop-shadow(0 0 20px rgba(255, 45, 149, 0.5));
+        stroke: #b35684;
+    }
+}
+
 body {
     background-color: #101011;
 }
@@ -42,7 +58,7 @@ body {
 }
 
 .neon .padding {
-    height: calc(100vw - 85vw);
+    height: calc(100vw - 81vw);
     min-height: 40px;
 }
 
@@ -67,16 +83,47 @@ body {
 .neon .text h1 {
     animation-name: barFightAnimation;
     animation-iteration-count: infinite;
-    animation-duration: 4.5s;
+    animation-duration: 5s;
     font-weight: 200;
-    font-style: italic;s
+    font-style: italic;
     font-size: calc(100vw - 82vw);
     padding-bottom: 15px;
     color: #531335;
     user-select: none;
 }
 
+.divLogoSVG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: calc(100vw - 95vw);
+}
 
+.logoSVG {
+    fill: none;
+    stroke: #531335;
+    stroke-width: 25;
+    stroke-miterlimit:10;
+    height: calc(100vw - 65vw);
+    width: calc(100vw - 65vw);
+    animation-name: logoAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@media (min-width: 900px) {
+    * {
+        font-size: 54px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .logoSVG {
+        stroke-width: 25;
+        height: 400px;
+        width: 400px;
+    }
+}
 
 
 
